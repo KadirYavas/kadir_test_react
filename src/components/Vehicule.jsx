@@ -15,7 +15,8 @@ const Vehicule = (props) => {
     return (
         <div>
             {props.validite === "Non validé" ?
-            <p onClick={change} className={classe}>{props.nom}, {props.year}, {props.color}, {props.type}, {border}</p>
+            <div><p className={classe}>{props.nom}, {props.year}, {props.color}, {props.type}, {border}</p>
+            <button onClick={change} className="btn">Valider votre voiture</button></div>
             :
             <p>{props.nom}, {props.year}, {props.color}, {props.type}, {props.validite}</p>
             }
